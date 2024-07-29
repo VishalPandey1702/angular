@@ -1,0 +1,15 @@
+<div class="user-feed-container">
+  <h2>User Feed</h2>
+  <div *ngIf="selectedUser">
+    <h3>{{ selectedUser?.userName }}'s Feed</h3>
+    <div *ngFor="let feedItem of userFeed" class="feed-item">
+      <h4>Post ID: {{ feedItem.post.postID }}</h4>
+      <p>{{ feedItem.post.content }}</p>
+      <p>Likes: {{ feedItem.likes }}</p>
+      <p>Comments: {{ feedItem.comments }}</p>
+    </div>
+  </div>
+  <div *ngIf="!selectedUser">
+    <p>Please select a user to view their feed.</p>
+  </div>
+</div>

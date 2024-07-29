@@ -1,0 +1,8 @@
+<div class="engagement-container">
+  <h2>User Engagement Scores</h2>
+  <button (click)="calculateEngagementScores()">Calculate Scores</button>
+  <div *ngFor="let engagement of engagementScores" class="engagement-score">
+    <h3>{{ engagement.user.userName }}</h3>
+    <p>Score: {{ engagement.score }}</p>
+  </div>
+</div>
